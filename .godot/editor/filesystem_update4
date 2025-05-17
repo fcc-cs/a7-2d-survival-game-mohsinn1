@@ -4,3 +4,5 @@ res://scenes/player.tscn
 res://scenes/apple_tree.tscn
 res://apple_tree.gd
 res://scripts/apple_tree.gd
+res://scenes/apple_collectable.tscn
+res://scenes/apple_collectable.gd

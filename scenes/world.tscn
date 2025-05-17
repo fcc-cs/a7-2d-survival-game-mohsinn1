@@ -272,9 +272,6 @@ layer_2/tile_data = PackedInt32Array(393198, 262147, 0, 393199, 262147, 0, 39320
 
 [node name="Player" parent="." instance=ExtResource("1_nnsk1")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.5, 2.5)
-
 [node name="appleTree" parent="." instance=ExtResource("6_qfnet")]
 position = Vector2(59, -30)
 

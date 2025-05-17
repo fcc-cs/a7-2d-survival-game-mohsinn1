@@ -519,3 +519,8 @@ frame_progress = 0.80763
 shape = SubResource("CircleShape2D_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
+limit_left = -720
+limit_top = -359
+limit_right = 240
+limit_bottom = 279
