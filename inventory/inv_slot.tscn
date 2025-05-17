@@ -14,5 +14,13 @@ script = ExtResource("1_yiowp")
 texture = ExtResource("1_gvcv6")
 centered = false
 
-[node name="itemDisplay" type="Sprite2D" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="itemDisplay" type="Sprite2D" parent="CenterContainer"]
 position = Vector2(8, 8)
