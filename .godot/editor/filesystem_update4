@@ -2,3 +2,5 @@ res://scenes/apple_tree.gd
 res://scenes/world.tscn
 res://scenes/player.tscn
 res://scenes/apple_tree.tscn
+res://apple_tree.gd
+res://scripts/apple_tree.gd
