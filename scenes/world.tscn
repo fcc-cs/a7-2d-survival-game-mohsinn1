@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://ccm8eclp5qua8"]
+[gd_scene load_steps=12 format=3 uid="uid://ccm8eclp5qua8"]
 
 [ext_resource type="Texture2D" uid="uid://bn6jbj33i2vth" path="res://art/environment/survivalgame-terrian-cliffs.png" id="1_71j4m"]
 [ext_resource type="PackedScene" uid="uid://bfspeu0nek5sm" path="res://scenes/player.tscn" id="1_nnsk1"]
 [ext_resource type="Texture2D" uid="uid://dbt2d7vs74lin" path="res://art/environment/survivalgame-terrian-defult.png" id="2_qfnet"]
 [ext_resource type="Texture2D" uid="uid://ddwq3nxcvflyv" path="res://art/environment/survivalgame-terrian-water.png" id="3_i7141"]
 [ext_resource type="Texture2D" uid="uid://c0rd3i2bd0s71" path="res://art/environment/survivalgame-trees.png" id="4_4mrxx"]
+[ext_resource type="PackedScene" uid="uid://bujwsx5w7avqs" path="res://scenes/apple_tree.tscn" id="6_qfnet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7r4gi"]
 texture = ExtResource("1_71j4m")
@@ -273,3 +274,9 @@ layer_2/tile_data = PackedInt32Array(393198, 262147, 0, 393199, 262147, 0, 39320
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
+
+[node name="appleTree" parent="." instance=ExtResource("6_qfnet")]
+position = Vector2(59, -30)
+
+[node name="appleTree2" parent="." instance=ExtResource("6_qfnet")]
+position = Vector2(-43, 97)
