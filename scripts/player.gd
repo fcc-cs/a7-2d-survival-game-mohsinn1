@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 var speed = 100
 var playerState
+@export var inv: Inv
+
 @onready var player = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
