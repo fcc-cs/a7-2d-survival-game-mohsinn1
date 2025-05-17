@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ccm8eclp5qua8"]
+[gd_scene load_steps=13 format=3 uid="uid://ccm8eclp5qua8"]
 
 [ext_resource type="Texture2D" uid="uid://bn6jbj33i2vth" path="res://art/environment/survivalgame-terrian-cliffs.png" id="1_71j4m"]
 [ext_resource type="PackedScene" uid="uid://bfspeu0nek5sm" path="res://scenes/player.tscn" id="1_nnsk1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ddwq3nxcvflyv" path="res://art/environment/survivalgame-terrian-water.png" id="3_i7141"]
 [ext_resource type="Texture2D" uid="uid://c0rd3i2bd0s71" path="res://art/environment/survivalgame-trees.png" id="4_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://dpsx4viwb1rdy" path="res://scenes/apple_tree.tscn" id="6_qfnet"]
+[ext_resource type="PackedScene" uid="uid://djf46rad2c0x2" path="res://scenes/stick_collectable.tscn" id="7_i7141"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7r4gi"]
 texture = ExtResource("1_71j4m")
@@ -271,9 +272,19 @@ layer_2/name = "3"
 layer_2/tile_data = PackedInt32Array(393198, 262147, 0, 393199, 262147, 0, 393200, 262147, 0, 393201, 262147, 0, 393202, 262147, 0, 393203, 262147, 0, 393204, 262147, 0, 393205, 262147, 0, 393206, 262147, 0, 393207, 262147, 0, 393208, 262147, 0, 393209, 262147, 0, 393210, 262147, 0, 393211, 262147, 0, 393212, 262147, 0, 393213, 262147, 0, 393214, 262147, 0, 393215, 327683, 0, 458734, 262147, 1, 458735, 262147, 1, 458736, 262147, 1, 458737, 262147, 1, 458738, 262147, 1, 458739, 262147, 1, 458740, 262147, 1, 458741, 262147, 1, 458742, 262147, 1, 458743, 262147, 1, 458744, 262147, 1, 458745, 262147, 1, 458746, 262147, 1, 458747, 262147, 1, 458748, 262147, 1, 458749, 262147, 1, 458750, 262147, 1, 458751, 327683, 1, 327681, 196611, 0, 327682, 262147, 0, 327683, 262147, 0, 327684, 262147, 0, 327685, 327683, 0, 393217, 196611, 1, 393218, 262147, 1, 393219, 262147, 1, 393220, 262147, 1, 393221, 327683, 1, 65519, 524291, 1, 65522, 1114115, 0, -196606, 1114115, 1, -131072, 1114115, 1, 3, 524291, 0, 196610, 524291, 0, 196601, 1114115, 0, 327666, 1114115, 0, 262126, 1114115, 0, -65554, 524291, 0, 65531, 524291, 0, -262144, 1114115, 0, -327677, 524291, 0, -131068, 1114115, 0, -393216, 524291, 0, -458750, 524291, 0, -393211, 1114115, 0, -262140, 1114115, 0, 65529, 1114115, 0, 196594, 1114115, 1, 327675, 1114115, 1, 262141, 1114115, 1, 196613, 1114115, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_nnsk1")]
+position = Vector2(21, 252)
 
 [node name="appleTree" parent="." instance=ExtResource("6_qfnet")]
 position = Vector2(59, -30)
 
 [node name="appleTree2" parent="." instance=ExtResource("6_qfnet")]
 position = Vector2(-43, 97)
+
+[node name="stickCollectable" parent="." instance=ExtResource("7_i7141")]
+position = Vector2(83, 105)
+
+[node name="stickCollectable2" parent="." instance=ExtResource("7_i7141")]
+position = Vector2(-17, 24)
+
+[node name="stickCollectable3" parent="." instance=ExtResource("7_i7141")]
+position = Vector2(175, -20)

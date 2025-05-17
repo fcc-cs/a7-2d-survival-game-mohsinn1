@@ -12,9 +12,9 @@ func update(slot: InvSlot):
 	else:
 		itemVisuals.visible = true
 		itemVisuals.texture = slot.item.texture
-		itemVisuals.z_index = 1000
 		if slot.amount > 1:
 			amountText.visible = true
+			amountText.z_index = 1
 		amountText.text = str(slot.amount)
 		
 		
