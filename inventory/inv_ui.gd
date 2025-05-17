@@ -6,6 +6,7 @@ var is_open = false
 
 
 func _ready():
+	inv.update.connect(updateSlots)
 	updateSlots()
 	close()
 	
@@ -26,6 +27,6 @@ func _process(delta: float) -> void:
 			open()
 			
 func updateSlots():
-	for i in range(min(slots.size(), inv.items.size())):
-		slots[i].update(inv.items[i])
+	for i in range(min(slots.size(), inv.slots.size())):
+		slots[i].update(inv.slots[i])
 		

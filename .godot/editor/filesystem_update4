@@ -11,3 +11,5 @@ res://scenes/apple_collectable.tscn
 res://inventory/inv_ui.tscn
 res://inventory/inv_slot.tscn
 res://inventory/inv_slot.gd
+res://inventory/slot.gd
+res://scripts/apple_tree.gd

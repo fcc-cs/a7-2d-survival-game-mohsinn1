@@ -50,6 +50,8 @@ func playAnim(dir):
 			
 func Player():
 	pass
-		
+
+func collect(item):
+	inv.insert(item)
 			
 		
