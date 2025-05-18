@@ -7,9 +7,11 @@ var bowEquipped = false
 var bowCooldown = true
 var arrow = preload("res://scenes/arrow.tscn")
 @onready var player = $AnimatedSprite2D
+var mouse_loc_from_player = null
 
 
 func _physics_process(delta: float) -> void:
+	mouse_loc_from_player = get_global_mouse_position() - self.position
 	var direction = Input.get_vector("left", "right", "up", "down")
 	if direction.x == 0 and direction.y == 0:
 		playerState = "idle"
@@ -39,36 +41,56 @@ func _physics_process(delta: float) -> void:
 	playAnim(direction)
 	
 func playAnim(dir):
-	if playerState == "idle":
-		player.play("idle")
+	if !bowEquipped:
+		speed = 100
+		if playerState == "idle":
+			player.play("idle")
+			
+		if playerState == "walking":
+			
+			if dir.y == -1:
+				player.play("northWalk")
+				
+			if dir.y == 1:
+				player.play("southWalk")
+				
+			if dir.x == 1:
+				player.play("eastWalk")
+				
+			if dir.x == -1:
+				player.play("westWalk")
+				
+			if dir.x > 0.5 and dir.y < -0.5:
+				player.play("northEWalk")
+			
+			if dir.x > 0.5 and dir.y > 0.5:
+				player.play("southEWalk")
+				
+			if dir.x < -0.5 and dir.y < -0.5:
+				player.play("northWWalk")
+				
+			if dir.x < -0.5 and dir.y > 0.5:
+				player.play("southWWalk")
+	if bowEquipped:
+		speed = 0
+		if mouse_loc_from_player.x >= -25 and mouse_loc_from_player.x <= 25 and mouse_loc_from_player.y < 0:
+			player.play("northAttack")
+		if mouse_loc_from_player.y >= -25 and mouse_loc_from_player.y <= 25 and mouse_loc_from_player.x > 0:
+			player.play("eastAttack")		
+		if mouse_loc_from_player.x >= -25 and mouse_loc_from_player.x <= 25 and mouse_loc_from_player.y > 0:
+			player.play("southAttack")
+		if mouse_loc_from_player.y >= -25 and mouse_loc_from_player.y <= 25 and mouse_loc_from_player.x < 0:
+			player.play("westAttack")	
+		if mouse_loc_from_player.x >= 25 and mouse_loc_from_player.y <= -25:
+			player.play("northEAttack")	
+		if mouse_loc_from_player.x >= 0.5 and mouse_loc_from_player.y >= 25:
+			player.play("southEAttack")						
+		if mouse_loc_from_player.x <= 0.5 and mouse_loc_from_player.y >= 25:
+			player.play("southWAttack")	
+		if mouse_loc_from_player.x <= -25 and mouse_loc_from_player.y <= -25:
+			player.play("northWAttack")			
 		
-	if playerState == "walking":
-		
-		if dir.y == -1:
-			player.play("northWalk")
-			
-		if dir.y == 1:
-			player.play("southWalk")
-			
-		if dir.x == 1:
-			player.play("eastWalk")
-			
-		if dir.x == -1:
-			player.play("westWalk")
-			
-		if dir.x > 0.5 and dir.y < -0.5:
-			player.play("northEWalk")
-		
-		if dir.x > 0.5 and dir.y > 0.5:
-			player.play("southEWalk")
-			
-		if dir.x < -0.5 and dir.y < -0.5:
-			player.play("northWWalk")
-			
-		if dir.x < -0.5 and dir.y > 0.5:
-			player.play("southWWalk")
-			
-			
+					
 func Player():
 	pass
 
