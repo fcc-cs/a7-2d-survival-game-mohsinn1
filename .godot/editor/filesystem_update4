@@ -19,3 +19,4 @@ res://scripts/arrow.gd
 res://scenes/arrow.tscn
 res://scripts/slime.gd
 res://scenes/slime.tscn
+res://scenes/slime_collectable.tscn

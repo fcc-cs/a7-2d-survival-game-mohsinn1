@@ -1,7 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://b65eomji2uwib"]
+[gd_scene load_steps=27 format=3 uid="uid://b65eomji2uwib"]
 
 [ext_resource type="Texture2D" uid="uid://b5wgxxs0wm6na" path="res://art/character/survivalgame-enemy-slime.png" id="1_371uh"]
 [ext_resource type="Script" uid="uid://c8piqfyss8cc4" path="res://scripts/slime.gd" id="1_p2gj0"]
+[ext_resource type="Resource" uid="uid://bhpngbiwtxlx6" path="res://inventory/items/slime.tres" id="2_pjw23"]
+[ext_resource type="PackedScene" uid="uid://cen45quxln25w" path="res://scenes/slime_collectable.tscn" id="3_n6pvg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2gj0"]
 atlas = ExtResource("1_371uh")
@@ -149,13 +151,17 @@ radius = 6.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_24adn"]
 radius = 53.0094
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2npkn"]
+radius = 768.146
+
 [node name="slime" type="CharacterBody2D"]
 script = ExtResource("1_p2gj0")
+itemRes = ExtResource("2_pjw23")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2v7ff")
 animation = &"idle"
-frame_progress = 0.343025
+frame_progress = 0.71976
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
@@ -172,6 +178,16 @@ shape = SubResource("CircleShape2D_pbccl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
 shape = SubResource("CircleShape2D_24adn")
 
+[node name="slime_collectable" parent="." instance=ExtResource("3_n6pvg")]
+visible = false
+
+[node name="collectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collectArea"]
+shape = SubResource("CircleShape2D_2npkn")
+disabled = true
+
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="collectArea" to="." method="_on_collect_area_body_entered"]
