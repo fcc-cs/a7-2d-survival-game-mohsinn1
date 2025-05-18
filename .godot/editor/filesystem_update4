@@ -17,3 +17,5 @@ res://scripts/stick_collectable.gd
 res://scenes/stick_collectable.tscn
 res://scripts/arrow.gd
 res://scenes/arrow.tscn
+res://scripts/slime.gd
+res://scenes/slime.tscn
