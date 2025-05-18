@@ -48,9 +48,11 @@ func _process(delta: float) -> void:
 				move(delta)
 	if Input.is_action_just_pressed("chat"):
 		print("chatting")
+		$dialogue.start()
 		isRoaming = false
 		isChatting = true
 		npc.play("idle")
+		
 
 func choose(array):
 	array.shuffle()
@@ -78,3 +80,8 @@ func _on_chat_detection_area_body_exited(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	$Timer.wait_time = choose([0.5, 1 , 1.5])
 	current_state = choose([IDLE, NEW_DIR, MOVE])
+
+
+func _on_dialogue_d_finished() -> void:
+	isChatting = false
+	isRoaming = true

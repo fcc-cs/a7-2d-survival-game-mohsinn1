@@ -302,13 +302,11 @@ script = ExtResource("1_abqhh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fdkk8")
 animation = &"idle"
-frame_progress = 0.645234
+frame_progress = 0.63121
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_iwn7c")
-
-[node name="dialogue" parent="CollisionShape2D" instance=ExtResource("3_rv78h")]
 
 [node name="chat_detection_area" type="Area2D" parent="."]
 
@@ -318,6 +316,11 @@ shape = SubResource("CircleShape2D_8x8lr")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="dialogue" parent="." instance=ExtResource("3_rv78h")]
+offset_top = 0.0
+offset_bottom = 40.0
+
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="d_finished" from="dialogue" to="." method="_on_dialogue_d_finished"]
