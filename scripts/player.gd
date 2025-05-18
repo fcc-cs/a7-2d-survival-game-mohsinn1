@@ -9,6 +9,10 @@ var arrow = preload("res://scenes/arrow.tscn")
 @onready var player = $AnimatedSprite2D
 var mouse_loc_from_player = null
 @onready var camera = $Camera2D
+signal stick_collected
+signal apple_collected
+signal slime_collected
+
 
 func _physics_process(delta: float) -> void:
 	mouse_loc_from_player = get_global_mouse_position() - self.position
@@ -96,6 +100,19 @@ func Player():
 
 func collect(item):
 	inv.insert(item)
+	print(item)
+	if str(item) == "<Resource#-9223372003333896773>":
+		print("STICK PICKED UP")
+		emit_signal("stick_collected")
+	
+	elif str(item) == "<Resource#-9223372004223089232>":
+		print("APPLE PICKED")
+		emit_signal("apple_collected")
+	
+	elif str(item) == "<Resource#-9223372002276932156>":
+		print("SLIME COLLECTED")
+		emit_signal("slime_collected")
+
 	
 
 			

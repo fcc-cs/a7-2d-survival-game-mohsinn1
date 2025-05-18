@@ -53,6 +53,13 @@ func _process(delta: float) -> void:
 		isChatting = true
 		npc.play("idle")
 		
+		
+	if Input.is_action_just_pressed("quest"):
+		print("quest started")
+		$npc_quest.next_quest()
+		isRoaming = false
+		isChatting = true
+		npc.play("idle")
 
 func choose(array):
 	array.shuffle()
@@ -85,3 +92,15 @@ func _on_timer_timeout() -> void:
 func _on_dialogue_d_finished() -> void:
 	isChatting = false
 	isRoaming = true
+
+
+func _on_npc_quest_quest_menu_closed() -> void:
+	isChatting = false
+	isRoaming = true
+
+
+
+
+func _on_player_stick_collected() -> void:
+	$npcQuest.stickCollecetd()
+	

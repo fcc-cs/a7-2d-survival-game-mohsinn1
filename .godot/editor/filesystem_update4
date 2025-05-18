@@ -27,3 +27,5 @@ res://scenes/npc.tscn
 res://scripts/dialogue_player.gd
 res://worker_dialogue1.json
 res://scenes/dialogue.tscn
+res://scripts/npc_quest.gd
+res://scenes/npc_quest.tscn

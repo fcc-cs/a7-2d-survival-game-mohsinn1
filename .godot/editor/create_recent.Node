@@ -1,6 +1,7 @@
+Button
+Control
 RichTextLabel
 NinePatchRect
-Control
 Timer
 CollisionShape2D
 Area2D
