@@ -196,6 +196,7 @@ texture_region_size = Vector2i(40, 40)
 texture = ExtResource("4_4mrxx")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
+0:0/0/y_sort_origin = 12
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -204,7 +205,8 @@ texture_region_size = Vector2i(40, 40)
 6:0/0 = 0
 7:0/0 = 0
 8:0/0 = 0
-8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.92456, 8.09364, 8.36343, 8.09364, 5.30583, 14.7484, -5.30583, 14.7484)
+8:0/0/y_sort_origin = 12
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.20513, 8.2735, 8.54329, 7.55407, 5.12597, 15.288, -5.30583, 15.1081)
 9:0/0 = 0
 10:0/0 = 0
 11:0/0 = 0
@@ -214,6 +216,7 @@ texture_region_size = Vector2i(40, 40)
 15:0/0 = 0
 16:0/0 = 0
 17:0/0 = 0
+17:0/0/y_sort_origin = 12
 17:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.89467, 8.60303, 7.80645, 6.37262, 3.98288, 14.9756, -4.93878, 14.3384)
 0:1/0 = 0
 1:1/0 = 0
@@ -224,6 +227,7 @@ texture_region_size = Vector2i(40, 40)
 6:1/0 = 0
 7:1/0 = 0
 8:1/0 = 0
+8:1/0/y_sort_origin = 12
 8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.9606, 5.57562, 3.32738, 5.03605, 0.809364, 13.1297, -9.08287, 12.9498)
 9:1/0 = 0
 10:1/0 = 0
@@ -234,6 +238,7 @@ texture_region_size = Vector2i(40, 40)
 15:1/0 = 0
 16:1/0 = 0
 17:1/0 = 0
+17:1/0/y_sort_origin = 12
 17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.3114, 5.09809, 3.98288, 5.09809, 0.796574, 12.4266, -10.3555, 12.108)
 0:2/0 = 0
 1:2/0 = 0
@@ -244,6 +249,7 @@ texture_region_size = Vector2i(40, 40)
 6:2/0 = 0
 7:2/0 = 0
 8:2/0 = 0
+8:2/0/y_sort_origin = 12
 8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.06838, 8.2735, 13.7592, 7.91378, 8.72315, 14.5686, 0.989222, 14.7484)
 9:2/0 = 0
 10:2/0 = 0
@@ -254,6 +260,7 @@ texture_region_size = Vector2i(40, 40)
 15:2/0 = 0
 16:2/0 = 0
 17:2/0 = 0
+17:2/0/y_sort_origin = 12
 17:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.42809, 7.73393, 13.9391, 8.2735, 9.44258, 14.9283, 1.16908, 14.9283)
 
 [sub_resource type="TileSet" id="TileSet_jhx03"]
@@ -265,6 +272,7 @@ sources/2 = SubResource("TileSetAtlasSource_e3hyu")
 sources/3 = SubResource("TileSetAtlasSource_q5onr")
 
 [node name="World" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
