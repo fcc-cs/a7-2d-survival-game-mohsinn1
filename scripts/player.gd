@@ -8,7 +8,7 @@ var bowCooldown = true
 var arrow = preload("res://scenes/arrow.tscn")
 @onready var player = $AnimatedSprite2D
 var mouse_loc_from_player = null
-
+@onready var camera = $Camera2D
 
 func _physics_process(delta: float) -> void:
 	mouse_loc_from_player = get_global_mouse_position() - self.position

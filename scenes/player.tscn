@@ -295,7 +295,7 @@ zoom = Vector2(2.5, 2.5)
 limit_left = -720
 limit_top = -359
 limit_right = 240
-limit_bottom = 279
+limit_bottom = 797
 
 [node name="InvUI" parent="." instance=ExtResource("4_dqkch")]
 offset_left = -48.0

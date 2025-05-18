@@ -20,3 +20,5 @@ res://scenes/arrow.tscn
 res://scripts/slime.gd
 res://scenes/slime.tscn
 res://scenes/slime_collectable.tscn
+res://scenes/world_2.tscn
+res://scripts/world_2.gd
