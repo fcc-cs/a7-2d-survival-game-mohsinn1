@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4awxi0gd6kpt"]
+
+[ext_resource type="Texture2D" uid="uid://dvbsp83g2och2" path="res://art/character/Minecraft-Bone.png" id="1_bsw8t"]
+
+[node name="dog_collectable" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_bsw8t")

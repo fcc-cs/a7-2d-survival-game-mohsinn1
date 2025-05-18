@@ -11,6 +11,8 @@ offset_bottom = 40.0
 script = ExtResource("1_yqrum")
 
 [node name="questUI" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
 offset_left = -38.0
 offset_top = -64.0
 offset_right = 38.0
@@ -60,6 +62,7 @@ text = "Yes"
 
 [node name="noQuest" type="NinePatchRect" parent="."]
 visible = false
+layout_mode = 0
 offset_left = -38.0
 offset_top = -64.0
 offset_right = 38.0
@@ -90,6 +93,7 @@ please come back later!"
 
 [node name="finishQuest" type="NinePatchRect" parent="."]
 visible = false
+layout_mode = 0
 offset_left = -38.0
 offset_top = -64.0
 offset_right = 38.0

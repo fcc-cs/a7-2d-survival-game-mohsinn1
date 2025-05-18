@@ -56,10 +56,11 @@ func _process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("quest"):
 		print("quest started")
-		$npc_quest.next_quest()
+		$npcQuest.next_quest()
 		isRoaming = false
 		isChatting = true
 		npc.play("idle")
+	move_and_collide(Vector2())
 
 func choose(array):
 	array.shuffle()
@@ -102,5 +103,5 @@ func _on_npc_quest_quest_menu_closed() -> void:
 
 
 func _on_player_stick_collected() -> void:
-	$npcQuest.stickCollecetd()
+	$npcQuest.stickCollected()
 	

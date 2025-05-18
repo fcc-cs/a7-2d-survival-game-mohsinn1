@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://0pexf5g3gndg"]
+
+[ext_resource type="Script" uid="uid://ddww0cvupi5jg" path="res://inventory/inventory_item.gd" id="1_juqdy"]
+[ext_resource type="Texture2D" uid="uid://6i0ba7d5uxnq" path="res://art/character/Minecraft-Bone_small.png" id="2_juqdy"]
+
+[resource]
+script = ExtResource("1_juqdy")
+name = "bone"
+texture = ExtResource("2_juqdy")
+metadata/_custom_type_script = "uid://ddww0cvupi5jg"

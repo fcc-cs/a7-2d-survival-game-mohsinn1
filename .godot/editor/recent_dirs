@@ -1,8 +1,9 @@
-res://scripts
-res://scenes
-res://art/inventory_art
 res://art/character
+res://scenes
+res://scripts
+res://art/character/2nd enemy
 res://inventory/items
+res://art/inventory_art
 res://
 res://art/environment
 res://inventory

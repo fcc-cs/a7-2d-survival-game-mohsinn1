@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 			print("Completed!!")
 			quest1_active = false
 			quest1_completed = true
+			play_finish_anim()
 	
 
 
@@ -43,4 +44,9 @@ func next_quest():
 func stickCollected():
 	stick +=1 
 	print(stick)
+	
+func play_finish_anim():
+	$finishQuest.visible = true
+	await get_tree().create_timer(3).timeout
+	$finishQuest.visible = false
 	
