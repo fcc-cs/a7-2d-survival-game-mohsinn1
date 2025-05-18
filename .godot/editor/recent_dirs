@@ -1,8 +1,8 @@
-res://scenes
-res://art/character
 res://scripts
+res://scenes
+res://art/inventory_art
+res://art/character
 res://inventory/items
 res://
 res://art/environment
 res://inventory
-res://art/inventory_art

@@ -1,3 +1,6 @@
+RichTextLabel
+NinePatchRect
+Control
 Timer
 CollisionShape2D
 Area2D
@@ -9,7 +12,3 @@ PathFollow2D
 Path2D
 AnimationPlayer
 ColorRect
-CollisionPolygon2D
-Node2D
-Node
-Sprite2D

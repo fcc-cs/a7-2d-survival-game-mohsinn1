@@ -1,6 +1,8 @@
-[gd_scene load_steps=39 format=3 uid="uid://ca4vq225py3jt"]
+[gd_scene load_steps=41 format=3 uid="uid://ca4vq225py3jt"]
 
+[ext_resource type="Script" uid="uid://bgfcb8bkxcbnd" path="res://scripts/npc.gd" id="1_abqhh"]
 [ext_resource type="Texture2D" uid="uid://diw8d1w7wpjur" path="res://art/character/Human-Worker-Red.png" id="1_nh2m4"]
+[ext_resource type="PackedScene" uid="uid://bgk3f6tiisdnc" path="res://scenes/dialogue.tscn" id="3_rv78h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abqhh"]
 atlas = ExtResource("1_nh2m4")
@@ -289,21 +291,24 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iwn7c"]
-radius = 4.12311
+radius = 6.08276
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8x8lr"]
 radius = 15.0
 
 [node name="npc" type="CharacterBody2D"]
+script = ExtResource("1_abqhh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fdkk8")
 animation = &"idle"
-frame_progress = 0.909699
+frame_progress = 0.645234
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_iwn7c")
+
+[node name="dialogue" parent="CollisionShape2D" instance=ExtResource("3_rv78h")]
 
 [node name="chat_detection_area" type="Area2D" parent="."]
 
@@ -312,3 +317,7 @@ shape = SubResource("CircleShape2D_8x8lr")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

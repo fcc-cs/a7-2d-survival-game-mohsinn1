@@ -22,3 +22,8 @@ res://scenes/slime.tscn
 res://scenes/slime_collectable.tscn
 res://scenes/world_2.tscn
 res://scripts/world_2.gd
+res://scripts/npc.gd
+res://scenes/npc.tscn
+res://scripts/dialogue_player.gd
+res://worker_dialogue1.json
+res://scenes/dialogue.tscn
